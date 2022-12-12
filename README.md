@@ -45,10 +45,10 @@ The following properties need to be entered in the following order.
   * Youngs Modulus in 2 Direction $E_{\perp}$
   * Poisson's Ratio in 1-2 Plane $\nu_{\perp\parallel}$
   * Inplane Shear Modulus $G_{\perp\parallel}$
-  * Longitudinal Strength in 11 Direction $R^t_\parallel$
-  * Compressive Strength in 11 Direction $R^c_\parallel$
-  * Longitudinal Strength in 22 Direction $R^t_\perp$
-  * Compressive Strength in 22 Direction $R^c_\perp$
+  * Longitudinal Strength in 1 Direction $R^t_\parallel$
+  * Compressive Strength in 1 Direction $R^c_\parallel$
+  * Longitudinal Strength in 2 Direction $R^t_\perp$
+  * Compressive Strength in 2 Direction $R^c_\perp$
   * Inplane Shear Strength $R_{\perp\parallel}$
   * Friction Coefficient of the Material $\mu_{\perp\parallel}$
   * Mode Interaction Exponent $m$ 
