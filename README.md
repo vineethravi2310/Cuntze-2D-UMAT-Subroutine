@@ -120,5 +120,18 @@ For ply 2 and 3, the resultant failure index (SDV 6) is 0.4605.
 
 For ply 4, the resultant failure index (SDV 6) is 0.4703. 
 
-The Abaqus results match perfectly with the hand calculations, which means the working of the UMAT is fine.
+# Analytical Calculations
+
+
+
+
+|       | $\sigma_1$  | $\sigma_2$ | $\tau_{21}$ | $\epsilon_1$ | $Eff^{\parallel\sigma}$ | $Eff^{\parallel\tau}$ | $Eff^{\perp\sigma}$ | $Eff^{\perp\tau}$ | $Eff^{\perp\parallel}$ | $Eff$ |
+|    :----:   |    :----:   |    :----:   |    :----:   |    :----:   |    :----:   |    :----:   |    :----:   |    :----:   |    :----:   |    :----:   |
+| Ply 1 | -1348.429 |  6.286   |    0.0    |  -0.01    |  0.0  |  1.0385  |  0.0731  |  0.0  |  0.0  | 1.0386   |
+| Ply 2 |    -474.81  | -43.165  |   56.44   | -0.003437 | 0.0   |  0.3569  | 0.0   |  0.2158  |  0.3561  |  0.4605  |
+| Ply 3 |    -474.81  | -43.165  |  -56.44   | -0.003437 | 0.0   |  0.3569  | 0.0   |  0.2158  |  0.3561  |  0.4605  |
+| Ply 4 |    398.808  | -92.615  |    0.0    |  0.003126 | 0.1751   |  0.0  | 0.0   | 0.4631   |  0.0  | 0.4703   |
+
+
+The above table shows the stresses and strains for each ply, and the failure indices are calculated analytically. The Abaqus results match perfectly with the hand calculations.
 
