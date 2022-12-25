@@ -6,30 +6,29 @@
 <em>Failure Modes for Transversely-Isotropic Materials</em>
 </p>
 
-The following is a UMAT subroutine for Cuntze failure criteria in Abaqus. It applies only to unidirectional composites. The general form of the Cuntze criterion utilizes the entire 3D state of stress and strain, but this UMAT considers only in-plane stresses and strains consistent with Classical Laminate Theory.
+The following is a UMAT subroutine for Cuntze failure criteria in Abaqus. It applies only to uni-directional composites. The general form of the Cuntze criterion utilizes the entire 3D state of stress and strain, but this UMAT considers only in-plane stresses and strains consistent with Classical Laminate Theory.
 
 ### Fiber Failure in Tension (FF1)
-The fiber failure in tension is given by 
-$$Eff^{\parallel\sigma} = \frac{\epsilon_{1}^tE_{\parallel}}{R^t_\parallel}$$
-$\epsilon_{1}^t$ is the tensile strain of the lamina in the 1 direction.
+$$Eff^{\parallel\sigma} = \frac{\epsilon_{1}^tE_{\parallel}}{R^t_\parallel} $$
+$\epsilon_{1}^t$ is the tensile strain of the  UD lamina in the 1 direction.
 
 ### Fiber Failure in Compression (FF2)
-The fiber failure in compression is given by 
+
 $$Eff^{\parallel\tau} = -\frac{\epsilon_1^cE_{\parallel}}{R^c_\parallel}$$
-$\epsilon_{1}^c$ is the compressive strain of the lamina in the 1 direction.
+$\epsilon_{1}^c$ is the compressive strain of the UD lamina in the 1 direction.
 
 ### Inter-Fiber Failure (IFF1)
-The inter-fiber failure in tension is given by 
+
 $$Eff^{\perp\sigma} = \frac{\sigma_{2}}{R^t_\perp} $$
 
 
 ### Inter-Fiber Failure (IFF2)
-The inter-fiber failure in compression is given by 
+
 $$Eff^{\perp\tau} = -\frac{\sigma_{2}}{R^c_\perp}$$
 
 
 ### Inter-Fiber Failure (IFF3)
-The inter-fiber failure in shear is given by 
+
 $$Eff^{\perp\parallel} = \frac{|\tau_{21}|}{R_{\perp\parallel} - \mu_{\perp\parallel}\sigma_{2}}$$
 
 ### Resultant Failure
@@ -135,3 +134,7 @@ For ply 4, the resultant failure index (SDV 6) is 0.4703.
 
 The above table shows the stresses and strains for each ply, and the failure indices are calculated analytically. The Abaqus results match perfectly with the hand calculations.
 
+# Reference
+Cuntze, R. The predictive capability of failure mode concept-based strength conditions for laminates composed of unidirectional laminae under static triaxial stress states.
+Journal of Composite Materials 46.19-20, 2012, S. 2563–2594.
+47
