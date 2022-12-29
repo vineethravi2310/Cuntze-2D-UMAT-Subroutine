@@ -6,29 +6,28 @@
 <em>Failure Modes for Transversely-Isotropic Materials</em>
 </p>
 
-The following is a UMAT subroutine for Cuntze failure criteria in Abaqus. It applies only to uni-directional composites. The general form of the Cuntze criterion utilizes the entire 3D state of stress and strain, but this UMAT considers only in-plane stresses and strains consistent with Classical Laminate Theory.
+**Cuntze2D.for** is a UMAT subroutine for Cuntze failure criteria in Abaqus. It applies only to unidirectional composites. The general form of the Cuntze criterion utilizes the entire 3D state of stress and strain, but this UMAT considers only in-plane stresses and strains consistent with Classical Laminate Theory.
 
 ### Fiber Failure in Tension (FF1)
+This mode is valid when $\sigma_1 \geq 0$
 $$Eff^{\parallel\sigma} = \frac{\epsilon_{1}^tE_{\parallel}}{R^t_\parallel} $$
 $\epsilon_{1}^t$ is the tensile strain of the  UD lamina in the 1 direction.
 
 ### Fiber Failure in Compression (FF2)
-
+This mode is valid when $\sigma_1 < 0$
 $$Eff^{\parallel\tau} = -\frac{\epsilon_1^cE_{\parallel}}{R^c_\parallel}$$
 $\epsilon_{1}^c$ is the compressive strain of the UD lamina in the 1 direction.
 
 ### Inter-Fiber Failure (IFF1)
-
+This mode is valid when $\sigma_2 \geq 0$
 $$Eff^{\perp\sigma} = \frac{\sigma_{2}}{R^t_\perp} $$
 
-
 ### Inter-Fiber Failure (IFF2)
-
+This mode is valid when $\sigma_2 < 0$
 $$Eff^{\perp\tau} = -\frac{\sigma_{2}}{R^c_\perp}$$
 
 
 ### Inter-Fiber Failure (IFF3)
-
 $$Eff^{\perp\parallel} = \frac{|\tau_{21}|}{R_{\perp\parallel} - \mu_{\perp\parallel}\sigma_{2}}$$
 
 ### Resultant Failure
